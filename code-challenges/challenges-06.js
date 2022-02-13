@@ -36,10 +36,11 @@ const findMax = (arr) => {
 const sumNums = (arr) => {
     let sum = 0;
 
-    for (let i = 0; i < arr.length; i++)
-        if (arr.filter(item => typeof item === 'number')){
-            item.push(arr);
-            sum += arr[i];}
+    for (let i = 0; i < arr.length; i++){
+     //   if (arr.filter(item => typeof item === 'number')){
+         if(typeof arr[i]=== 'number'){
+           // item.push(arr);
+            sum += arr[i];}}
     return sum;
 }
 // -------------------------------------------------------------------------------------------------------
@@ -55,18 +56,32 @@ const sumNums = (arr) => {
 // Output: ['Python','Ruby','JS','C#']
 
 const reverseArray = (arr) => {
+    // const arr2={};
     // for(let i= arr.length-1 ; i >= 0; i--)
     // {
-    //     console.log (arr[i]);
+    //     arr2.push(arr[i]);
+
+    //   //  console.log (arr[i]);
+    // // }
+    // // let front =0;
+    // // let back = arr.length-1;
+    // // let buffer;
+    // // if (front< back){
+    // //     buffer= arr[front]
+    // //     arr[front]=arr[back]
+    // //     arr[back]=buffer
     // }
-    let front =0;
-    let back = arr.length-1;
-    let buffer;
-    if (front< back){
-        buffer= arr[front]
-        arr[front]=arr[back]
-        arr[back]=buffer
+    // return reverseArray;
+    // let reverseArray = new array;
+    // for(var i = arr.length-1; i >= 0; i--) {
+    //     reverseArray.push(arr[i]);
+    // }
+    // return reverseArray;
+    const arr2=[];
+    for(let i = arr.length-1; i >= 0; i--) {
+        arr2.push(arr[i]);
     }
+    return arr2;
 }
 // -------------------------------------------------------------------------------------------------------
 
