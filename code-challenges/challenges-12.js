@@ -18,7 +18,8 @@
 // 
 
 const oddFiltration = (arr) => {
-    // write your code here
+    const result = arr.filter(value => value % 2 !== 0);
+    return result;
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -70,7 +71,17 @@ const oddFiltration = (arr) => {
 //  2- If one of the names is null dont add it to the full name
 
 const cvsFiltration = (arr) => {
-    // write your code here
+    let result = [];
+    const search = arr.filter(value => {
+        if (value.yearsOfExperience > 4 && value.tech == "JS") {
+            result = [{
+                fullName: value.firstName + " " + value.LastName,
+                tech: value.tech,
+            }
+            ];
+        }
+    });
+    return result;
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -85,7 +96,16 @@ const cvsFiltration = (arr) => {
 // 
 
 const vowelsFiltration = (arr) => {
-    // write your code here
+    let returnArray=[];
+    const result = arr.filter(value => {
+        let regex=/[a,e,i,o,u]/;
+        let check=regex.test(value);
+        if(!check)
+        {
+         returnArray.push(value);
+          }
+    });
+return returnArray;
 } 
 // -------------------------------------------------------------------------------------------------------
 
