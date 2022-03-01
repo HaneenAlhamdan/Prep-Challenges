@@ -13,12 +13,12 @@
 // Output => "olleH";
 
 const reverseString = (string) => {
-    let returnStr="";
+    let reverseString="";
     for(let i=string.length;i>=0;i--)
     {
-        returnStr+=string.charAt(i);
+        reverseString+=string.charAt(i);
     }
-    return returnStr;
+    return reverseString;
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -34,15 +34,15 @@ const reverseString = (string) => {
 // Input <= ["hello ^_^ ","Hi ^_^" ,"What's up ^_-" ,"lol"] , Output => ["hello ^_^ ","Hi ^_^" ] ;
 
 const detectFace = (arr) => {
-        let returnArr=[];
-        let regex=/[\^_]+/;
+        let detectFace=[];
+        let smill=/[\^_]+/;
         for(let i=0;i<arr.length;i++)
         {
-            if(arr[i].match(regex)=="^_^"){
-                returnArr.push(arr[i]);
+            if(arr[i].match(smill)=="^_^"){
+                detectFace.push(arr[i]);
             }
         }
-        return returnArr;
+        return detectFace;
 }
 // -------------------------------------------------------------------------------------------------------
 
